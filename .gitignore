@@ -1,0 +1,6 @@
+.build/
+*.log
+.DS_Store
+*.xcuserstate
+xcuserdata/
+EinsteinFlow.xcodeproj/project.xcworkspace/

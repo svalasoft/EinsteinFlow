@@ -1,0 +1,136 @@
+// Portable companion to Einstein.metal: identical math and argument order.
+// All child samples stay in main for the vendored SkSL sample() dialect.
+uniform shader svala_layer;
+uniform float2 svala_arg0;
+uniform float4 svala_arg1;
+uniform float4 svala_arg2;
+uniform float4 svala_arg3;
+uniform float4 svala_arg4;
+uniform float4 svala_arg5;
+uniform float4 svala_arg6;
+uniform float4 svala_arg7;
+uniform float4 svala_arg8;
+uniform float4 svala_arg9;
+uniform float4 svala_arg10;
+uniform float4 svala_arg11;
+
+float einsteinSmooth(float a, float b, float value) {
+    float x = clamp((value - a) / (b - a), 0.0, 1.0);
+    return x * x * (3.0 - 2.0 * x);
+}
+
+// This helper is pure arithmetic: child sampling remains in the entry point.
+// Most fragments reject each head before any flame/particle calculations.
+float4 einsteinTorch(float2 position, float4 head, float power,
+                     float time, float style, float seed) {
+    float amount = clamp(power, 0.0, 1.0);
+    if (amount <= 0.0001) return float4(0.0);
+    float2 delta = position - head.xy;
+    if (abs(delta.x) > 110.0 || abs(delta.y) > 110.0) return float4(0.0);
+    float2 direction = head.zw;
+    float lengthSquared = dot(direction, direction);
+    float2 forward = lengthSquared > 0.0001 ? direction / sqrt(lengthSquared) : float2(1.0, 0.0);
+    float2 side = float2(-forward.y, forward.x);
+    float along = dot(delta, forward);
+    float across = dot(delta, side);
+    float distanceSquared = dot(delta, delta);
+    float trailing = max(-along, 0.0);
+    float width = 2.3 + trailing * 0.17;
+    float flicker = 0.82 + 0.18 * sin(time * 53.0 + seed * 6.1 + across * 0.72 + trailing * 0.63);
+    float plume = exp(-trailing / 19.0) * exp(-(across * across) / (width * width))
+        * (1.0 - einsteinSmooth(0.0, 4.0, along)) * flicker;
+    float halo = exp(-distanceSquared / 225.0);
+    float hot = exp(-distanceSquared / 9.0);
+    float core = 1.0 - einsteinSmooth(0.0, 2.4, sqrt(distanceSquared));
+    float3 plasma = style < 0.5 ? float3(0.05, 0.76, 1.0)
+        : style < 1.5 ? float3(0.68, 0.30, 1.0) : float3(1.0, 0.39, 0.08);
+    float3 copper = float3(1.0, 0.40, 0.055);
+    float3 light = amount * (plasma * (halo * 0.22 + plume * 0.66)
+        + copper * (hot * 0.95 + plume * 0.34));
+    float sparks = 0.0;
+    for (int index = 0; index < 5; ++index) {
+        float i = float(index);
+        float age = fract(time * (1.55 + i * 0.17) + i * 0.731 + seed * 0.137);
+        float spread = sin(i * 2.399963 + 0.4 + seed * 0.31);
+        float2 chip = -forward * (7.0 + age * 57.0)
+            + side * spread * (3.0 + age * 27.0);
+        float radius = 0.65 + (1.0 - age) * 1.15;
+        float spark = 1.0 - einsteinSmooth(0.0, radius, length(delta - chip));
+        sparks += spark * (1.0 - age) * (1.0 - age);
+    }
+    light += copper * (sparks * amount * 1.8);
+    float coverage = clamp(amount * (core + hot * 0.62), 0.0, 1.0);
+    return float4(light, coverage);
+}
+
+half4 main(float2 position) {
+    float2 size = svala_arg0;
+    float4 state = svala_arg1;
+    float4 head0 = svala_arg2;
+    float4 head1 = svala_arg3;
+    float4 head2 = svala_arg4;
+    float4 head3 = svala_arg5;
+    float4 head4 = svala_arg6;
+    float4 head5 = svala_arg7;
+    float4 head6 = svala_arg8;
+    float4 head7 = svala_arg9;
+    float4 powers0 = svala_arg10;
+    float4 powers1 = svala_arg11;
+    half4 picture = sample(svala_layer, position);
+    float count = clamp(state.z, 0.0, 8.0);
+    float3 light = float3(0.0);
+    float coverage = 0.0;
+    if (count > 0.5) {
+        float4 beam = einsteinTorch(position, head0, powers0.x, state.x, state.y, 0.0);
+        light += beam.rgb;
+        coverage = max(coverage, beam.a);
+    }
+    if (count > 1.5) {
+        float4 beam = einsteinTorch(position, head1, powers0.y, state.x, state.y, 1.0);
+        light += beam.rgb;
+        coverage = max(coverage, beam.a);
+    }
+    if (count > 2.5) {
+        float4 beam = einsteinTorch(position, head2, powers0.z, state.x, state.y, 2.0);
+        light += beam.rgb;
+        coverage = max(coverage, beam.a);
+    }
+    if (count > 3.5) {
+        float4 beam = einsteinTorch(position, head3, powers0.w, state.x, state.y, 3.0);
+        light += beam.rgb;
+        coverage = max(coverage, beam.a);
+    }
+    if (count > 4.5) {
+        float4 beam = einsteinTorch(position, head4, powers1.x, state.x, state.y, 4.0);
+        light += beam.rgb;
+        coverage = max(coverage, beam.a);
+    }
+    if (count > 5.5) {
+        float4 beam = einsteinTorch(position, head5, powers1.y, state.x, state.y, 5.0);
+        light += beam.rgb;
+        coverage = max(coverage, beam.a);
+    }
+    if (count > 6.5) {
+        float4 beam = einsteinTorch(position, head6, powers1.z, state.x, state.y, 6.0);
+        light += beam.rgb;
+        coverage = max(coverage, beam.a);
+    }
+    if (count > 7.5) {
+        float4 beam = einsteinTorch(position, head7, powers1.w, state.x, state.y, 7.0);
+        light += beam.rgb;
+        coverage = max(coverage, beam.a);
+    }
+    float intensity = max(light.r, max(light.g, light.b));
+    if (intensity < 0.000001 && coverage < 0.000001) return picture;
+
+    // Sample the Canvas once for the whole field, with two extra neighbours
+    // only near an active cutter. Eight cutters still use one layer pass.
+    half4 ahead = sample(svala_layer, clamp(position + float2(1.4, 0.8), float2(0.5), size - 0.5));
+    half4 behind = sample(svala_layer, clamp(position - float2(0.8, 1.4), float2(0.5), size - 0.5));
+    float3 original = float3(picture.rgb);
+    float3 neighbours = max(float3(ahead.rgb), float3(behind.rgb));
+    float bloom = 0.16 * clamp(max(intensity, coverage), 0.0, 1.0);
+    float3 color = original + max(neighbours - original * 1.02, float3(0.0)) * bloom + light;
+    color = mix(color, float3(1.0, 0.99, 0.91), coverage);
+    return half4(half3(clamp(color, float3(0.0), float3(1.0))), picture.a);
+}

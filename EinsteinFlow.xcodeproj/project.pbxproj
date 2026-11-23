@@ -1,0 +1,366 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		289D446E7266D3B8E1D02189 /* CameraNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4844CA7F1C8736423A7FC88 /* CameraNavigation.swift */; };
+		43D9178D257C4AC9B30C8C1A /* EinsteinFlowApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BE9421C995BB372EFA6FF8B /* EinsteinFlowApp.swift */; };
+		4C71791785F46402ED4C4741 /* hatviz-LICENSE.txt in Resources */ = {isa = PBXBuildFile; fileRef = 4CD9E78A54EEBE9C48A72BEE /* hatviz-LICENSE.txt */; };
+		5F1AA3EFCC5C4993C390583F /* Einstein.metal in Sources */ = {isa = PBXBuildFile; fileRef = AC8AE0BD361840B1BD308370 /* Einstein.metal */; };
+		64995610E978403D8626C314 /* einsteinFlow.sksl in Resources */ = {isa = PBXBuildFile; fileRef = B7BE956A3B3E5B10B5FD0884 /* einsteinFlow.sksl */; };
+		6C3998D7962D39004174AC7E /* LaserConstruction.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A0B473E0C9EC1EF48450C0 /* LaserConstruction.swift */; };
+		78CC774B5BB2BB723331E553 /* WheelZoomInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = E94CBAAA8DF92D22F4D2FFCE /* WheelZoomInput.swift */; };
+		9FF891DBC174417049C37238 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C622379F49486238DBE1C68 /* Assets.xcassets */; };
+		B5E2C6822AA9038EC2FA6DA6 /* TraceScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0FE4163181A5C2986FFAAB2 /* TraceScene.swift */; };
+		B93E7F0932A5D6099C9C5174 /* HatTiling.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61BCE9CCB03B7B72DBE85A6 /* HatTiling.swift */; };
+		E0A776BF0CBB912B7DB92298 /* EinsteinFlowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80AB39F2AC5DC31628C9CDF1 /* EinsteinFlowView.swift */; };
+		E697623EC3AB855985A69846 /* LaserFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358B592907FF42549DF55B5E /* LaserFieldView.swift */; };
+		EE481F7EB5CE5EB3D2E4BF54 /* FlowClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93DF8DBDF6373CCC85817AFB /* FlowClock.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		2C622379F49486238DBE1C68 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		358B592907FF42549DF55B5E /* LaserFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaserFieldView.swift; sourceTree = "<group>"; };
+		4BE9421C995BB372EFA6FF8B /* EinsteinFlowApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EinsteinFlowApp.swift; sourceTree = "<group>"; };
+		4CD9E78A54EEBE9C48A72BEE /* hatviz-LICENSE.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "hatviz-LICENSE.txt"; sourceTree = "<group>"; };
+		80AB39F2AC5DC31628C9CDF1 /* EinsteinFlowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EinsteinFlowView.swift; sourceTree = "<group>"; };
+		93DF8DBDF6373CCC85817AFB /* FlowClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlowClock.swift; sourceTree = "<group>"; };
+		985C22868B0CC9DE96779D0F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A4844CA7F1C8736423A7FC88 /* CameraNavigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraNavigation.swift; sourceTree = "<group>"; };
+		A6A0B473E0C9EC1EF48450C0 /* LaserConstruction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaserConstruction.swift; sourceTree = "<group>"; };
+		AC8AE0BD361840B1BD308370 /* Einstein.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Einstein.metal; sourceTree = "<group>"; };
+		B7BE956A3B3E5B10B5FD0884 /* einsteinFlow.sksl */ = {isa = PBXFileReference; path = einsteinFlow.sksl; sourceTree = "<group>"; };
+		D0FE4163181A5C2986FFAAB2 /* TraceScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraceScene.swift; sourceTree = "<group>"; };
+		E94CBAAA8DF92D22F4D2FFCE /* WheelZoomInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WheelZoomInput.swift; sourceTree = "<group>"; };
+		F61BCE9CCB03B7B72DBE85A6 /* HatTiling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HatTiling.swift; sourceTree = "<group>"; };
+		F8D703137747BD288447E40E /* EinsteinFlow.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = EinsteinFlow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		345ECACF926C51BBF6773CB4 /* EinsteinFlow */ = {
+			isa = PBXGroup;
+			children = (
+				2C622379F49486238DBE1C68 /* Assets.xcassets */,
+				A4844CA7F1C8736423A7FC88 /* CameraNavigation.swift */,
+				AC8AE0BD361840B1BD308370 /* Einstein.metal */,
+				B7BE956A3B3E5B10B5FD0884 /* einsteinFlow.sksl */,
+				4BE9421C995BB372EFA6FF8B /* EinsteinFlowApp.swift */,
+				80AB39F2AC5DC31628C9CDF1 /* EinsteinFlowView.swift */,
+				93DF8DBDF6373CCC85817AFB /* FlowClock.swift */,
+				F61BCE9CCB03B7B72DBE85A6 /* HatTiling.swift */,
+				985C22868B0CC9DE96779D0F /* Info.plist */,
+				A6A0B473E0C9EC1EF48450C0 /* LaserConstruction.swift */,
+				358B592907FF42549DF55B5E /* LaserFieldView.swift */,
+				D0FE4163181A5C2986FFAAB2 /* TraceScene.swift */,
+				E94CBAAA8DF92D22F4D2FFCE /* WheelZoomInput.swift */,
+				FB0C08B6EC9D263EAF326071 /* ThirdParty */,
+			);
+			path = EinsteinFlow;
+			sourceTree = "<group>";
+		};
+		9FA0C8013BEF31CE0A0C6526 = {
+			isa = PBXGroup;
+			children = (
+				345ECACF926C51BBF6773CB4 /* EinsteinFlow */,
+				B6440D03DC807227BD659B49 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B6440D03DC807227BD659B49 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F8D703137747BD288447E40E /* EinsteinFlow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB0C08B6EC9D263EAF326071 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				4CD9E78A54EEBE9C48A72BEE /* hatviz-LICENSE.txt */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		49E9007EC589F4FDE0C87F3B /* EinsteinFlow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E46D7E283B4D0E174FE10ED1 /* Build configuration list for PBXNativeTarget "EinsteinFlow" */;
+			buildPhases = (
+				1412E62BE2C1057D14C8BC6F /* Sources */,
+				4E1D642416A47FCB9B43641D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EinsteinFlow;
+			productName = EinsteinFlow;
+			productReference = F8D703137747BD288447E40E /* EinsteinFlow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F98EC7AA8DC5EF24544369FA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1200;
+				TargetAttributes = {
+					49E9007EC589F4FDE0C87F3B = {
+						DevelopmentTeam = NS5WB6U6X9;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 51CAF6F94AE06D6457A8EA4C /* Build configuration list for PBXProject "EinsteinFlow" */;
+			compatibilityVersion = "Xcode 11.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 9FA0C8013BEF31CE0A0C6526;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				49E9007EC589F4FDE0C87F3B /* EinsteinFlow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4E1D642416A47FCB9B43641D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9FF891DBC174417049C37238 /* Assets.xcassets in Resources */,
+				64995610E978403D8626C314 /* einsteinFlow.sksl in Resources */,
+				4C71791785F46402ED4C4741 /* hatviz-LICENSE.txt in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1412E62BE2C1057D14C8BC6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				289D446E7266D3B8E1D02189 /* CameraNavigation.swift in Sources */,
+				5F1AA3EFCC5C4993C390583F /* Einstein.metal in Sources */,
+				43D9178D257C4AC9B30C8C1A /* EinsteinFlowApp.swift in Sources */,
+				E0A776BF0CBB912B7DB92298 /* EinsteinFlowView.swift in Sources */,
+				EE481F7EB5CE5EB3D2E4BF54 /* FlowClock.swift in Sources */,
+				B93E7F0932A5D6099C9C5174 /* HatTiling.swift in Sources */,
+				6C3998D7962D39004174AC7E /* LaserConstruction.swift in Sources */,
+				E697623EC3AB855985A69846 /* LaserFieldView.swift in Sources */,
+				B5E2C6822AA9038EC2FA6DA6 /* TraceScene.swift in Sources */,
+				78CC774B5BB2BB723331E553 /* WheelZoomInput.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3FFA0F968C8464F2989B4236 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = EinsteinFlow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skelmir.EinsteinFlow;
+				PRODUCT_NAME = EinsteinFlow;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		9E00C231E7E141E457FBC39A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = NS5WB6U6X9;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E802EAFE1DD4488C337645A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = NS5WB6U6X9;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		E8EE204F6EB6A455DA1FCC6C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = EinsteinFlow/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.skelmir.EinsteinFlow;
+				PRODUCT_NAME = EinsteinFlow;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		51CAF6F94AE06D6457A8EA4C /* Build configuration list for PBXProject "EinsteinFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E802EAFE1DD4488C337645A5 /* Debug */,
+				9E00C231E7E141E457FBC39A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E46D7E283B4D0E174FE10ED1 /* Build configuration list for PBXNativeTarget "EinsteinFlow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E8EE204F6EB6A455DA1FCC6C /* Debug */,
+				3FFA0F968C8464F2989B4236 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F98EC7AA8DC5EF24544369FA /* Project object */;
+}
