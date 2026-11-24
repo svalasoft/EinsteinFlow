@@ -1,8 +1,18 @@
 # EinsteinFlow
 
+> SvalaSoft
+>
+> **[EinsteinFlow][live-demo]**
+>
+> Lasers trace never-repeating hat patterns in a live SwiftUI shader animation. Built with Svala for the web.
+>
+> [![Run EinsteinFlow in your browser. Glowing lasers trace a field of teal and amber hat tiles.](.github/assets/einsteinflow-preview.png)][live-demo]
+
+[live-demo]: https://apps.svalasoft.app/us/app/einsteinflow/id8816557782/web
+
 A shared SwiftUI shader example for **Apple iOS 17+, Mac Catalyst, and Svala**. Lasers trace the thirteen sides of genuine hat tiles, completed tiles fill with color, and the camera pulls back and rotates to reveal the growing aperiodic cluster. Choose a field of up to 2,048 hats; completed fields fade into another construction pass. Apple compiles a standard SwiftUI Metal layer effect, while Svala loads its matching SkSL torch. The application view and runtime vector geometry are shared.
 
-**[Try EinsteinFlow in your browser](https://apps.svalasoft.app/us/app/einsteinflow/id8816557782)**. The live demo runs the shared SwiftUI app as WebAssembly using Svala.
+You can also install the web version using your browser’s **Install app**, **Add to Dock**, or **Add to Home Screen** command. It opens at `/web` with its own EinsteinFlow icon.
 
 The “hat” is the aperiodic monotile discovered by David Smith and developed with Joseph Samuel Myers, Craig S. Kaplan and Chaim Goodman-Strauss. Its tilings include reflected hats. See the [authors’ project and paper](https://cs.uwaterloo.ca/~csk/hat/) and the [Scientific American article](https://www.scientificamerican.com/article/newfound-mathematical-einstein-shape-creates-a-never-repeating-pattern/) that inspired this example.
 
